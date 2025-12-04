@@ -1,3 +1,4 @@
 .vevn
 __pycache__/
 *.pyc
+encrypted_seed.txt
