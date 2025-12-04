@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports: ["8080:8080"]
+    volumes:
+      - seed-data:/data
+      - cron-output:/cron
+      # Mount keys so container can read them
+      - ./student_private.pem:/app/student_private.pem:ro
+    environment:
+      - TZ=UTC
+volumes:
+  seed-data:
+  cron-output:
