@@ -1,4 +1,13 @@
-.vevn
+# Encrypted seed (sensitive)
+encrypted_seed.txt
+
+# Python cache
 __pycache__/
 *.pyc
-encrypted_seed.txt
+
+# Environment files
+.env
+
+# IDE files
+.vscode/
+.idea/

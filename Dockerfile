@@ -23,6 +23,7 @@ RUN mkdir -p /data /cron && chmod 755 /data /cron \
 
 # Install cron job file
 COPY cron/2fa-cron /etc/cron.d/2fa-cron
+RUN sed -i 's/\r$//' /etc/cron.d/2fa-cron
 RUN chmod 0644 /etc/cron.d/2fa-cron
 
 # Expose API port
