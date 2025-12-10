@@ -2,7 +2,7 @@ import os
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.backends import default_backend
 
-PRIVATE_KEY_PATH = os.environ.get("STUDENT_PRIVATE_PEM", "/app/student_private.pem")
+PRIVATE_KEY_PATH = os.environ.get("STUDENT_PRIVATE_PEM", "../student_private.pem")
 
 def load_private_key(path: str = PRIVATE_KEY_PATH):
     """

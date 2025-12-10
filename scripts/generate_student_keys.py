@@ -7,7 +7,18 @@ from cryptography.hazmat.backends import default_backend
 
 
 def generate_rsa_keypair(key_size: int = 4096) -> Tuple[rsa.RSAPrivateKey, rsa.RSAPublicKey]:
-    
+    """
+    Generate RSA key pair
+
+    Returns:
+        Tuple of (private_key, public_key) objects
+
+    Implementation:
+    - Use your language's crypto library to generate 4096-bit RSA key
+    - Set public exponent to 65537
+    - Serialize to PEM format
+    - Return key objects for further use
+    """
     private_key = rsa.generate_private_key(
         public_exponent=65537,
         key_size=key_size,
